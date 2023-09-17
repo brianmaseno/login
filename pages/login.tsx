@@ -32,6 +32,7 @@ const Login = () => {
         .then(function (response) {
           if (response.data.status == 200) {
             console.log("Successful");
+            localStorage.setItem("User_data",JSON.stringify(response.data.data))
             router.push("/");
           } else {
             console.log(response.data.message);
