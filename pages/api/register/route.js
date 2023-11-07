@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         await connectMongoDB();
         console.log(req);
         const { name, email, password } = await req.body;
-        const user = await User.findOne({ email }).select("_id");
+        const user = await User.findOne({email}).select("_id");
         if (user) {
           const error = new Error("Email Exists");
           error.code = 403;

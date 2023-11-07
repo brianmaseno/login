@@ -115,7 +115,7 @@ const Signup = () => {
 
             {error && <div className="bg-red-500">{error}</div>}
 
-            <Link href={"/login"}>Don't have an account? Login</Link>
+            <Link href={"/log"}>Don't have an account? Login</Link>
           </form>
         </div>
       </div>

@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         await connectMongoDB();
         console.log(req);
         const { email, password } = await req.body;
-        const user = await User.findOne({ email });
+        const user = await User.findOne({email});
 
         if (!user) {
           const error = new Error("Email does not Exist");
